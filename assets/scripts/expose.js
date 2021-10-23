@@ -21,7 +21,7 @@ function init() {
   })
 
   // slider volume icons
-  addGlobalEventListener("change", "#volume", e =>{
+  addGlobalEventListener("input", "#volume", e =>{
     let volume = document.querySelector("#volume").value;
     if (volume >=67){
       document.querySelector("input+img").src = "assets/icons/volume-level-3.svg";
@@ -42,16 +42,25 @@ function init() {
   addGlobalEventListener("click", "button", e =>{
     let volume = document.querySelector("#volume").value;
     let value = document.querySelector("#horn-select").value;
-
-    if (volume != 0) {
-      let volumeController = document.querySelector("audio");
-      volumeController.pause();
-      volumeController.currentTime = 0;
-      volumeController.play();
+    if (volume != 0 && value != "select") {
+      let audioController = document.querySelector("audio");
+      audioController.volume = volume/100;
+      audioController.pause();
+      audioController.currentTime = 0;
+      audioController.play();
     }
     if (value=="party-horn"){
       const jsConfetti = new JSConfetti();
-      jsConfetti.addConfetti();
+      jsConfetti.addConfetti({
+        emojis: ['✨', '🍰' ],
+        emojiSize: 50,
+        confettiNumber: 60,
+      });
+      jsConfetti.addConfetti({
+        emojis: ['✨', '🍰' ],
+        emojiSize: 50,
+        confettiNumber: 60,
+      });
     }
 })
 
