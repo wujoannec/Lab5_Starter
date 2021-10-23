@@ -26,7 +26,7 @@ function init() {
         
         document.querySelector("img").src = "assets/images/smiling-open.png";
         utterThis.onend = () => {
-            document.querySelector("img").src = "assets/images/smiling-open.png";
+            document.querySelector("img").src = "assets/images/smiling.png";
         }
       
     })
