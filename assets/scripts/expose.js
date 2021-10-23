@@ -14,22 +14,11 @@ function init() {
   addGlobalEventListener("change", "#horn-select", e =>{
       document.querySelector("img").src = "assets/images/"+e.target.value+".svg";
       document.querySelector("img").alt = e.target.value+" picture";
+
+      document.querySelector("audio").src = "assets/audio/"+e.target.value+".mp3";
   })
 
   document.querySelector("img").src = 'assets/images/smiling.png';
 
 
-
-
-
-  // document.querySelector("#horn-select").src = 'img/new-image.jpg';
-
-
-  // const input = document.querySelector('#horn-select');
-  // input.addEventListener('#horn-select', updateValue);
-
-  // function updateValue(e) {
-  //   e.src = "assets/images/"+e.target.value+".svg";
-  //   console.log(e.src);
-  // }
 }
