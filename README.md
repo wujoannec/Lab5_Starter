@@ -2,4 +2,6 @@
 Joanne Wu \
 Em Nam \
 https://github.com/wujoannec/github-actions-for-ci/issues/7 \
-https://wujoannec.github.io/Lab5_Starter/
+https://wujoannec.github.io/Lab5_Starter/expose \
+https://wujoannec.github.io/Lab5_Starter/explore \
+
