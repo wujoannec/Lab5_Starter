@@ -3,6 +3,7 @@
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
+  //credit for speechSynthesis code: Mozilla official documentation 
     var synth = window.speechSynthesis;
 
     const playButton = document.querySelector('button');
